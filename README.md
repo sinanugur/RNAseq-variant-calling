@@ -25,11 +25,6 @@ You should create a new directory called __data__ and place your FASTQ files or 
 snakemake -j 15 --use-conda
 ```
 
-
-
-
-```
-
 Workflow summary and DAG plot
 -----------------------------
 
