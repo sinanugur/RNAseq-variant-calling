@@ -3,12 +3,20 @@ files, = glob_wildcards("data/{sample}.fastq.gz")
 
 
 
-include: "rules/ncrna_workflow.smk"
+include: "rules/gbc_variant_call.smk"
 
 
-route=config.get("route","bowtie2")
+#route=config.get("route","bowtie2")
 
-if route == "bowtie2":
+
+
+rule all:
+	input:
+		"results/main/output_snp.filtered.vcf.gz"
+
+
+
+""" if route == "bowtie2":
 	rule all:
 		input:
 			expand("results/count_tables/{gene}.tsv",gene=gene),
@@ -37,4 +45,4 @@ elif route == "stats" or route == "statistics":
 else:
 	print("Please select a correct route...")
 	print("bowtie1/bowtie2")
-
+ """
