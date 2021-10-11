@@ -27,7 +27,10 @@ snakemake -j 15 --use-conda
 
 Workflow summary and DAG plot
 -----------------------------
+We followed the GATK RNAseq short variant discovery pipeline. 
+![plot](images/image1.png)
 
+Our Snakemake DAG plot.
 ![plot](images/dag.PNG)
 
 
